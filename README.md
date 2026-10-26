@@ -1,26 +1,31 @@
 # BestCommerceApp
 
-BestCommerceApp is a learning project for a single-store e-commerce platform with a web storefront, a mobile storefront, and one shared backend API. Customers can browse products, search and filter the catalog, manage a cart, complete checkout with a mock payment flow, and review their orders. Administration is web-only for this MVP.
+BestCommerceApp is a learning project for a single-store e-commerce platform with a web storefront, a mobile storefront, and a shared backend API.
 
-## Live web demo
+## 1. MVP Scope & Features
+
+- Customers can create an account, sign in, browse products, view product details, and manage a shopping cart.
+- Customers can complete checkout with a mock payment flow, manage account information and saved addresses, and review order history.
+- Administrators can manage products, categories, inventory, and order operations through protected administration tools.
+- The platform is designed around one shared API so web and mobile clients use consistent customer, catalog, cart, checkout, and order behavior.
+
+## 2. Technology & Deployment
+
+- Backend/API: Node.js, Express.js, TypeScript, REST APIs, and JWT-based authentication.
+- Database: PostgreSQL hosted by Supabase.
+- Hosting: Vercel for the web frontend, Render for the backend/API, and Supabase for PostgreSQL.
+- Web frontend: React, TypeScript, Vite, React Router, and Tailwind CSS.
+- Mobile frontend: React Native, Expo SDK 58, Expo Router, and Expo Secure Store.
+
+### Access
+
+#### Live web demo
 
 [bestcommerce-web.vercel.app](https://bestcommerce-web.vercel.app)
 
-## Phase 1 — Product & Technical Design
+#### Mobile preview
 
-Phase 1 defines the product goal, customer and administrator roles, MVP scope, functional and non-functional requirements, feature modules, REST API plan, web/mobile/API/database architecture, local and production environments, coding and security standards, and project risks.
-
-The core design decision is a shared REST API: the web and mobile clients use the same customer accounts, catalog, cart, checkout, order, and address rules. Administrator tools remain in the web application for this MVP.
-
-## Phase 2 — Database Design
-
-Phase 2 covers the MVP entities and relationships, normalized PostgreSQL data design, product categories and variants, inventory, customer accounts, addresses, carts, orders, order-item snapshots, and relational constraints. The deployed backend uses PostgreSQL hosted by Supabase.
-
-## Mobile preview
-
-The mobile app uses React Native, Expo SDK 58, Expo Router, and Expo Secure Store. From the mobile project directory, start the LAN preview with `pnpm start`, then scan the generated QR code in Expo Go.
-
-The checked-in QR image below points to the current LAN preview address. It works only while the development server is running on the same local network; regenerate it if the address changes.
+Start the mobile project with `pnpm start`, then scan the generated LAN QR code in Expo Go. The checked-in image below is valid only while the development server is running at the matching local-network address; regenerate it if that address changes.
 
 ![BestCommerce Expo SDK 58 QR code](./docs/mobile-preview/bestcommerce-expo-sdk58-qr.png)
 
